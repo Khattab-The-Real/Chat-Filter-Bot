@@ -15,4 +15,5 @@ client.on('ready', () => {
 client.on('message', message => {
   if(config.FILTER_LIST.some(word => message.content.toLowerCase().includes(word))){
     message.delete()
+    message.channel.send(`@<${message.author}> Watch your language!`)
   }})
